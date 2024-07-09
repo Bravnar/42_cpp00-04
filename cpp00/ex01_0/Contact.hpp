@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/01 10:26:44 by smuravyev         #+#    #+#             */
-/*   Updated: 2024/07/09 17:27:08 by smuravye         ###   ########.fr       */
+/*   Created: 2024/07/09 15:45:33 by smuravye          #+#    #+#             */
+/*   Updated: 2024/07/09 17:56:34 by smuravye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,17 @@
 
 # include <iostream>
 
-class Contact
-{
+class	Contact {
 	private:
+		int			_index;
 		std::string	_firstname;
 		std::string	_lastname;
-		std::string	_middlename; //optional
-		std::string	_email;
-		std::string	_phonenumber;
-		int			_index;
-		void		_number_is_valid(Contact _phonenumber);
+		std::string	_nickname;
 	public:
 		Contact();
 		~Contact();
+		void	set_contact(int	index);
+		void	print_contact() const;
 };
 
 #endif

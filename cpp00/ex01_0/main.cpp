@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/01 10:26:44 by smuravyev         #+#    #+#             */
-/*   Updated: 2024/07/09 17:27:08 by smuravye         ###   ########.fr       */
+/*   Created: 2024/07/09 15:33:04 by smuravye          #+#    #+#             */
+/*   Updated: 2024/07/09 17:55:20 by smuravye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
+#include <iostream>
+#include "PhoneBook.hpp"
 
-# include <iostream>
-
-class Contact
-{
-	private:
-		std::string	_firstname;
-		std::string	_lastname;
-		std::string	_middlename; //optional
-		std::string	_email;
-		std::string	_phonenumber;
-		int			_index;
-		void		_number_is_valid(Contact _phonenumber);
-	public:
-		Contact();
-		~Contact();
-};
-
-#endif
+int	main() {
+	PhoneBook	book;
+	std::string input;
+	
+	book.start();
+	std::cin >> input;
+	if (input == "ADD")
+		book.add();
+	else if (input == "SEARCH") {
+		std::cin >>
+	}
+		book.add()
+	return 0;
+}
