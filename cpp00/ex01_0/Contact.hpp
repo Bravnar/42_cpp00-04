@@ -6,7 +6,7 @@
 /*   By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 15:45:33 by smuravye          #+#    #+#             */
-/*   Updated: 2024/07/09 17:56:34 by smuravye         ###   ########.fr       */
+/*   Updated: 2024/07/09 18:14:48 by smuravye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class	Contact {
 		Contact();
 		~Contact();
 		void	set_contact(int	index);
-		void	print_contact() const;
+		// void	print_contact() const;
 };
 
 #endif

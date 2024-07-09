@@ -6,7 +6,7 @@
 /*   By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 15:33:04 by smuravye          #+#    #+#             */
-/*   Updated: 2024/07/09 17:55:20 by smuravye         ###   ########.fr       */
+/*   Updated: 2024/07/09 18:27:14 by smuravye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,26 @@
 
 int	main() {
 	PhoneBook	book;
-	std::string input;
+	std::string	cmd;
 	
 	book.start();
-	std::cin >> input;
-	if (input == "ADD")
-		book.add();
-	else if (input == "SEARCH") {
-		std::cin >>
+	while (!std::cin.eof())
+	{
+		std::cout << "---> ";
+		std::cin >> cmd;
+		if (cmd == "ADD")
+			book.add();
+		else if (cmd == "SEARCH")
+			break;
+		else if (cmd == "EXIT")
+		{
+			book.exit();
+			break;
+		}
+		else if (std::cin.eof())
+			break ;
+		else
+			std::cout << "Invalid command. Please try again." << std::endl;
 	}
-		book.add()
-	return 0;
+	return (0);
 }

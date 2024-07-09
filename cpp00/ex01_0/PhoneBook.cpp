@@ -6,7 +6,7 @@
 /*   By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 15:40:01 by smuravye          #+#    #+#             */
-/*   Updated: 2024/07/09 17:53:25 by smuravye         ###   ########.fr       */
+/*   Updated: 2024/07/09 18:23:59 by smuravye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ PhoneBook::~PhoneBook() {}
 void	PhoneBook::start(void)
 {
 	std::cout << std::endl;
-	std::cout << "  ---------- PHONEBOOK ----------  " << std::endl;
+	std::cout << "o ---------- PHONEBOOK ---------- o" << std::endl;
 	std::cout << "|                                 |" << std::endl;
 	std::cout << "|                                 |" << std::endl;
 	std::cout << "| Please select: -----------------|" << std::endl;
@@ -29,7 +29,7 @@ void	PhoneBook::start(void)
 	std::cout << "| EXIT: exit the program          |" << std::endl;
 	std::cout << "|                                 |" << std::endl;
 	std::cout << "|                                 |" << std::endl;
-	std::cout << "  -------------------------------- " << std::endl;
+	std::cout << "o ------------------------------- o" << std::endl;
 	std::cout << std::endl;
 }
 
@@ -42,9 +42,14 @@ void	PhoneBook::add(void)
 	}
 	_contact[_size].set_contact(_size);
 	_size++;
-		
+	std::cout << "Current size: " << _size << std::endl;
 }
 
-void	PhoneBook::search(std::string input) {
+// void	PhoneBook::search(std::string input) {
 	
+// }
+
+void	PhoneBook::exit(void)
+{
+	std::cout << "Closing PhoneBook." << std::endl;
 }

@@ -6,7 +6,7 @@
 #    By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/09 15:29:10 by smuravye          #+#    #+#              #
-#    Updated: 2024/07/09 15:42:41 by smuravye         ###   ########.fr        #
+#    Updated: 2024/07/09 18:15:43 by smuravye         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 NAME = PhoneBook
 
 # List of source files (without the .cpp extension)
-FILES = main PhoneBook
+FILES = main PhoneBook Contact
 
 # List of source files with the .cpp extension
 SRCS = $(addsuffix .cpp, $(FILES))
