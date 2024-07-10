@@ -6,7 +6,7 @@
 /*   By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 15:33:04 by smuravye          #+#    #+#             */
-/*   Updated: 2024/07/09 18:27:14 by smuravye         ###   ########.fr       */
+/*   Updated: 2024/07/10 17:39:59 by smuravye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int	main() {
 	while (!std::cin.eof())
 	{
 		std::cout << "---> ";
-		std::cin >> cmd;
+		std::getline(std::cin, cmd);
 		if (cmd == "ADD")
 			book.add();
 		else if (cmd == "SEARCH")
-			break;
+			book.search();
 		else if (cmd == "EXIT")
 		{
 			book.exit();

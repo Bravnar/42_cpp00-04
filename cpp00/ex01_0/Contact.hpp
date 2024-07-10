@@ -6,7 +6,7 @@
 /*   By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 15:45:33 by smuravye          #+#    #+#             */
-/*   Updated: 2024/07/09 18:14:48 by smuravye         ###   ########.fr       */
+/*   Updated: 2024/07/10 17:38:10 by smuravye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define CONTACT_HPP
 
 # include <iostream>
+# include <string>
+# include <iomanip>
 
 class	Contact {
 	private:
@@ -25,7 +27,7 @@ class	Contact {
 		Contact();
 		~Contact();
 		void	set_contact(int	index);
-		// void	print_contact() const;
+		void	display_contacts() const;
 };
 
 #endif

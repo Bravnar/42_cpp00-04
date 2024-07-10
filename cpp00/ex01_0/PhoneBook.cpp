@@ -6,7 +6,7 @@
 /*   By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 15:40:01 by smuravye          #+#    #+#             */
-/*   Updated: 2024/07/09 18:23:59 by smuravye         ###   ########.fr       */
+/*   Updated: 2024/07/10 17:41:32 by smuravye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,11 @@ void	PhoneBook::start(void)
 	std::cout << std::endl;
 	std::cout << "o ---------- PHONEBOOK ---------- o" << std::endl;
 	std::cout << "|                                 |" << std::endl;
-	std::cout << "|                                 |" << std::endl;
 	std::cout << "| Please select: -----------------|" << std::endl;
 	std::cout << "|                                 |" << std::endl;
 	std::cout << "| ADD: add a contact to phonebook |" << std::endl;
 	std::cout << "| SEARCH: search a contact        |" << std::endl;
 	std::cout << "| EXIT: exit the program          |" << std::endl;
-	std::cout << "|                                 |" << std::endl;
 	std::cout << "|                                 |" << std::endl;
 	std::cout << "o ------------------------------- o" << std::endl;
 	std::cout << std::endl;
@@ -35,19 +33,26 @@ void	PhoneBook::start(void)
 
 void	PhoneBook::add(void)
 {
-	if (_size >= 8)
+	if (_size == 8)
 	{
-		std::cout << "Phonebook is full." << std::endl;
-		return ;
+		std::cout << "Phonebook is full. Replacing last contact" << std::endl;
+		_contact[_size].set_contact(_size);
+		if (std::cin.eof())
+			return;
 	}
-	_contact[_size].set_contact(_size);
-	_size++;
+	else
+	{
+		_contact[_size].set_contact(_size);
+		_size++;
+		if (std::cin.eof())
+			return;
+	}
 	std::cout << "Current size: " << _size << std::endl;
 }
 
-// void	PhoneBook::search(std::string input) {
-	
-// }
+void	PhoneBook::search(void) {
+	_contact->display_contacts();
+}
 
 void	PhoneBook::exit(void)
 {
