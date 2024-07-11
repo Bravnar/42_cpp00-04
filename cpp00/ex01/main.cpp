@@ -3,19 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smuravyev <smuravyev@student.42.fr>        +#+  +:+       +#+        */
+/*   By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/04 15:41:05 by smuravyev         #+#    #+#             */
-/*   Updated: 2024/07/04 15:41:43 by smuravyev        ###   ########.fr       */
+/*   Created: 2024/07/09 15:33:04 by smuravye          #+#    #+#             */
+/*   Updated: 2024/07/11 15:19:30 by smuravye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "PhoneBook.hpp"
 
-int	main()
-{
+int	main() {
 	PhoneBook	book;
-
-	book.start();
+	std::string	cmd;
+	
+	while (!std::cin.eof())
+	{
+		book.start();
+		std::cout << "-> ";
+		std::getline(std::cin, cmd);
+		if (cmd == "ADD")
+			book.add();
+		else if (cmd == "SEARCH")
+			book.search();
+		else if (cmd == "EXIT")
+		{
+			book.exit();
+			break;
+		}
+		else if (std::cin.eof())
+			break ;
+		else
+			std::cout << "Invalid command. Please try again." << std::endl;
+	}
 	return (0);
 }
