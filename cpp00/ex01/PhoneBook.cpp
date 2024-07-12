@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+        */
+/*   By: smuravye <smuravye@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 15:40:01 by smuravye          #+#    #+#             */
-/*   Updated: 2024/07/11 15:33:52 by smuravye         ###   ########.fr       */
+/*   Updated: 2024/07/12 14:44:52 by smuravye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include <cctype>
+#include <algorithm>
 
 PhoneBook::PhoneBook() : _size(0) {}
 
@@ -36,7 +37,12 @@ void	PhoneBook::start(void)
 
 bool	PhoneBook::str_is_numeric(std::string& str) const
 {
-	return std::all_of(str.begin(), str.end(), ::isdigit);
+	// return std::all_of(str.begin(), str.end(), ::isdigit);
+	for (std::string::const_iterator it = str.begin(); it != str.end(); it++) {
+		if (!std::isdigit(*it))
+			return false;
+	}
+	return true;
 }
 
 void	PhoneBook::add(void)
@@ -84,8 +90,8 @@ void	PhoneBook::search(void) {
 		return;
 	do
 	{
-		if (str_is_numeric(select)) {
-			int index = std::stoi(select);
+		if (str_is_numeric(select) && select.length() == 1) {
+			int index = std::atoi(select.c_str());
 			
 			if (index >= 1 && index <= _size) {
 				std::cout << "Index [" << select << "] found" << std::endl;
