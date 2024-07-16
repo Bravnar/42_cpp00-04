@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/07/09 15:29:10 by smuravye          #+#    #+#              #
-#    Updated: 2024/07/16 13:55:43 by smuravye         ###   ########.fr        #
+#    Created: 2024/07/16 13:56:18 by smuravye          #+#    #+#              #
+#    Updated: 2024/07/16 14:49:29 by smuravye         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
-NAME = brainz
+NAME = moar_brainz
 FILES = main Zombie
 SRCS = $(addsuffix .cpp, $(FILES))
 OBJS = $(addprefix objs/, $(addsuffix .o, $(FILES)))
