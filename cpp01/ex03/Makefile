@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+         #
+#    By: bravnar <bravnar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/16 13:56:18 by smuravye          #+#    #+#              #
-#    Updated: 2024/07/16 15:32:49 by smuravye         ###   ########.fr        #
+#    Updated: 2024/07/16 23:43:38 by bravnar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 NAME = unnecessary_violence
-FILES = main 
+FILES = main HumanA HumanB Weapon
 SRCS = $(addsuffix .cpp, $(FILES))
 OBJS = $(addprefix objs/, $(addsuffix .o, $(FILES)))
 
