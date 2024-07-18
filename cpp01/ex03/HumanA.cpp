@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/16 15:35:41 by smuravye          #+#    #+#             */
-/*   Updated: 2024/07/18 15:14:19 by smuravye         ###   ########.fr       */
+/*   Created: 2024/07/18 11:37:31 by smuravye          #+#    #+#             */
+/*   Updated: 2024/07/18 15:15:13 by smuravye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
-#include "HumanB.hpp"
-#include "Weapon.hpp"
 
-int	main()
-{
-	{
-		// Weapon club;
-		Weapon	club = Weapon("crude spiked club");
-		HumanA	bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon	club = Weapon("crude spiked club");
+HumanA::HumanA(const std::string& name, Weapon& type) : _name(name), _held(type) {
+	std::cout 	<< this->_name 
+				<< " enters the arena wielding a " 
+				<< this->_held.getType() 
+				<< std::endl;
+}
 
-		HumanB	jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
+HumanA::~HumanA(void) { std::cout << this->_name << " dieded.\n"; }
 
-	return 0;
+void	HumanA::attack(void) {
+	std::cout	<< this->_name 
+				<< " attacks with their " 
+				<< this->_held.getType() 
+				<< std::endl;
 }

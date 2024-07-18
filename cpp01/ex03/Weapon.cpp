@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/16 15:35:41 by smuravye          #+#    #+#             */
-/*   Updated: 2024/07/18 15:14:19 by smuravye         ###   ########.fr       */
+/*   Created: 2024/07/18 11:10:51 by smuravye          #+#    #+#             */
+/*   Updated: 2024/07/18 15:10:07 by smuravye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-#include "HumanB.hpp"
 #include "Weapon.hpp"
 
-int	main()
-{
-	{
-		// Weapon club;
-		Weapon	club = Weapon("crude spiked club");
-		HumanA	bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon	club = Weapon("crude spiked club");
+/* Default constructor */
+Weapon::Weapon(void) : _type("stick") { }
 
-		HumanB	jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
+/* Parametrized Constructor */
+Weapon::Weapon(const std::string& type) : _type(type) { }
 
-	return 0;
+/* Destructor */
+Weapon::~Weapon(void) { }
+
+const std::string&	Weapon::getType(void) const {
+	return this->_type;
+}
+
+void				Weapon::setType(std::string newType) {
+	this->_type = newType;
 }
