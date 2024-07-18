@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smuravye <smuravye@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 15:40:01 by smuravye          #+#    #+#             */
-/*   Updated: 2024/07/12 14:44:52 by smuravye         ###   ########.fr       */
+/*   Updated: 2024/07/18 15:39:54 by smuravye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include <cctype>
-#include <algorithm>
 
 PhoneBook::PhoneBook() : _size(0) {}
 
