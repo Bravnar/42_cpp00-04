@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smuravyev <smuravyev@student.42.fr>        +#+  +:+       +#+        */
+/*   By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 15:35:41 by smuravye          #+#    #+#             */
-/*   Updated: 2024/07/17 16:52:34 by smuravyev        ###   ########.fr       */
+/*   Updated: 2024/07/18 10:57:26 by smuravye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 #include "HumanB.hpp"
+#include "Weapon.hpp"
 
 int	main()
 {
 	{
 		Weapon	club = Weapon("crude spiked club");
-
 		HumanA	bob("Bob", club);
 		bob.attack();
 		club.setType("some other type of club");
