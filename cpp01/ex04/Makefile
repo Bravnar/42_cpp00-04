@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+         #
+#    By: smuravye <smuravye@student.42lausanne.c    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/16 13:56:18 by smuravye          #+#    #+#              #
-#    Updated: 2024/07/18 15:29:06 by smuravye         ###   ########.fr        #
+#    Updated: 2024/07/22 13:45:55 by smuravye         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,7 @@ clean:
 
 fclean: clean
 		@rm -rf $(NAME)
+		@rm -f *.replace
 
 re: fclean all
 
