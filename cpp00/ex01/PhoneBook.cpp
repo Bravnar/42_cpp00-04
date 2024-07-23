@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smuravye <smuravye@student.42.fr>          +#+  +:+       +#+        */
+/*   By: smuravye <smuravye@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 15:40:01 by smuravye          #+#    #+#             */
-/*   Updated: 2024/07/18 15:39:54 by smuravye         ###   ########.fr       */
+/*   Updated: 2024/07/23 12:06:23 by smuravye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include <cctype>
+#include <cstdlib>
 
 PhoneBook::PhoneBook() : _size(0) {}
 
@@ -90,7 +91,7 @@ void	PhoneBook::search(void) {
 	do
 	{
 		if (str_is_numeric(select) && select.length() == 1) {
-			int index = std::atoi(select.c_str());
+			int index = atoi(select.c_str());
 			
 			if (index >= 1 && index <= _size) {
 				std::cout << "Index [" << select << "] found" << std::endl;
